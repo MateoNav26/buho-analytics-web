@@ -1,6 +1,7 @@
 import { useState } from "react";
+import Logo from "@/components/ui/Logo";
 
-const navLinks = [
+const NAV_LINKS = [
   { name: "Servicios", href: "#servicios" },
   { name: "Metodología", href: "#metodologia" },
   { name: "Nosotros", href: "#nosotros" },
@@ -10,60 +11,48 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white dark:bg-neutral-950 border-b border-neutral-100 dark:border-neutral-800">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-30 w-full bg-white/80 dark:bg-neutral-950/80 backdrop-blur border-b border-neutral-100 dark:border-neutral-800">
+      <nav
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        aria-label="Main navigation"
+      >
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 text-primary-600 dark:text-primary-400">
-          <span className="sr-only">Búho Analytics</span>
-          {/* Búho Analytics SVG Logo */}
-          <svg
-            className="h-8 w-auto"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <circle cx="20" cy="20" r="20" fill="#111827" />
-            <ellipse cx="13.5" cy="18" rx="5" ry="7" fill="#fff" />
-            <ellipse cx="26.5" cy="18" rx="5" ry="7" fill="#fff" />
-            <circle cx="13.5" cy="18" r="2.2" fill="#0ea5e9" />
-            <circle cx="26.5" cy="18" r="2.2" fill="#0ea5e9" />
-            <ellipse cx="20" cy="28" rx="7" ry="3" fill="#fff" />
-            <path d="M10 13 Q13 10 20 13 Q27 10 30 13" stroke="#0ea5e9" strokeWidth="1.5" fill="none" />
-          </svg>
-          <span className="ml-2 text-lg font-bold text-neutral-900 dark:text-white tracking-tight hidden sm:inline">
-            Búho Analytics
-          </span>
-        </a>
+        <div className="flex items-center">
+          <a href="/" aria-label="Búho Analytics - Página de Inicio" className="flex items-center gap-2">
+            <Logo className="h-8 w-auto text-neutral-900 dark:text-white" />
+            <span className="ml-2 text-lg font-bold text-neutral-900 dark:text-white tracking-tight font-dm-sans hidden sm:inline whitespace-nowrap">
+              Búho Analytics
+            </span>
+          </a>
+        </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6 text-base font-medium">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="text-neutral-700 dark:text-neutral-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <ul className="hidden md:flex items-center gap-8 font-dm-sans text-base font-medium">
+          {NAV_LINKS.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className="text-neutral-700 dark:text-neutral-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
 
         {/* CTA Button & Hamburger */}
         <div className="flex items-center gap-2">
+          {/* CTA Button (Desktop only) */}
           <a
             href="#contacto"
-            className="hidden md:inline-block rounded-lg bg-black px-5 py-2.5 text-base font-semibold text-primary-500 dark:text-primary-400 shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="hidden md:inline-block rounded-lg bg-black px-5 py-2.5 text-base font-semibold text-primary-500 dark:text-primary-400 shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500 font-dm-sans"
           >
-            Contáctanos
+            Solicitar Propuesta
           </a>
-          {/* Hamburger */}
+          {/* Hamburger (Mobile only) */}
           <button
             className="inline-flex items-center justify-center rounded-md p-2 text-neutral-700 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500 md:hidden"
-            aria-label="Abrir menú"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
             onClick={() => setMenuOpen((open) => !open)}
             type="button"
           >
@@ -83,17 +72,34 @@ export default function Header() {
             </svg>
           </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <nav className="md:hidden bg-white dark:bg-neutral-950 border-t border-neutral-100 dark:border-neutral-800">
-          <ul className="flex flex-col gap-2 px-4 py-4 text-base font-medium">
-            {navLinks.map((link) => (
+        <div className="fixed inset-0 z-40 bg-white/95 dark:bg-neutral-950/95 backdrop-blur flex flex-col items-center justify-center md:hidden transition-all">
+          <button
+            className="absolute top-4 right-4 p-2 rounded-md text-neutral-700 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            aria-label="Cerrar menú"
+            onClick={() => setMenuOpen(false)}
+            type="button"
+          >
+            <svg
+              className="h-7 w-7"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <ul className="flex flex-col gap-8 text-2xl font-dm-sans font-semibold">
+            {NAV_LINKS.map((link) => (
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="block w-full py-2 px-2 rounded-md text-neutral-800 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                  className="text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
@@ -103,14 +109,14 @@ export default function Header() {
             <li>
               <a
                 href="#contacto"
-                className="block w-full mt-2 rounded-lg bg-black px-5 py-2.5 text-base font-semibold text-primary-500 dark:text-primary-400 shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="mt-8 inline-block rounded-lg bg-black px-8 py-3 text-lg font-semibold text-primary-500 dark:text-primary-400 shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
                 onClick={() => setMenuOpen(false)}
               >
-                Contáctanos
+                Solicitar Propuesta
               </a>
             </li>
           </ul>
-        </nav>
+        </div>
       )}
     </header>
   );
