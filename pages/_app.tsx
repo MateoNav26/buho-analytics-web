@@ -5,7 +5,7 @@ import { DM_Sans, Playfair_Display } from "next/font/google";
 
 // --- Importación de Componentes de Layout --- //
 import Header from "@/components/layout/Header";
-// import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/Footer";
 
 // --- Importación de Componentes de UI --- //
 // import Button from "@/components/ui/button";
@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} /> {/* Aquí se renderiza cada página */}
       </main>
 
-      {/* <Footer /> */} {/* (Aquí iría el Footer cuando lo tengas) */}
+      <Footer />
     </div>
   );
 }
