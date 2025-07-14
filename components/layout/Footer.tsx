@@ -35,7 +35,11 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const Footer = () => {
+type FooterProps = {
+  onOpenContact?: () => void;
+};
+
+const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
   const currentYear = new Date().getFullYear();
 
   return (
