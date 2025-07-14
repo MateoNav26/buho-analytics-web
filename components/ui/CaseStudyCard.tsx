@@ -1,6 +1,7 @@
 "use client";
 
 import { DirectionAwareHover } from "./direction-aware-hover";
+import Card from "@/components/ui/Card";
 
 interface CaseStudyCardProps {
   title: string;
@@ -16,7 +17,7 @@ export default function CaseStudyCard({
   className = "",
 }: CaseStudyCardProps) {
   return (
-    <div className={`h-[400px] w-full ${className}`}>
+    <Card className={`h-[400px] w-full ${className}`} variant="elevated">
       <DirectionAwareHover
         imageUrl={backgroundImage}
         className="h-full w-full"
@@ -31,6 +32,6 @@ export default function CaseStudyCard({
           </p>
         </div>
       </DirectionAwareHover>
-    </div>
+    </Card>
   );
-} 
+}

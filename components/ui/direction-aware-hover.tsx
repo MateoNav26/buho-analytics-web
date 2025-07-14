@@ -17,7 +17,9 @@ export const DirectionAwareHover = ({
   imageClassName?: string;
   className?: string;
 }) => {
-  const [direction, setDirection] = useState<"top" | "bottom" | "left" | "right" | null>(null);
+  const [direction, setDirection] = useState<
+    "top" | "bottom" | "left" | "right" | null
+  >(null);
 
   const handleMouseEnter = (event: React.MouseEvent<HTMLDivElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -44,7 +46,7 @@ export const DirectionAwareHover = ({
     <div
       className={cn(
         "group/card relative h-full w-full rounded-xl bg-slate-100 dark:bg-slate-900",
-        className
+        className,
       )}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -52,7 +54,7 @@ export const DirectionAwareHover = ({
       <AnimatePresence mode="wait">
         {direction && (
           <motion.div
-            className="pointer-events-none absolute -inset-px z-10 opacity-0 transition duration-300 group-hover/card:opacity-100"
+            className="pointer-events-none absolute -inset-px z-10 opacity-0 transition duration-300 group-hover/card:opacity-100 rounded-xl"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -60,24 +62,28 @@ export const DirectionAwareHover = ({
             }}
             exit={{ opacity: 0 }}
           >
-                         <div
-               className={cn(
-                 "absolute inset-0 bg-gradient-to-r from-primary-accent to-secondary-accent opacity-0 transition duration-300 group-hover/card:opacity-20",
-                 {
-                   "bg-gradient-to-b from-primary-accent to-secondary-accent": direction === "top",
-                   "bg-gradient-to-t from-primary-accent to-secondary-accent": direction === "bottom",
-                   "bg-gradient-to-l from-primary-accent to-secondary-accent": direction === "right",
-                   "bg-gradient-to-r from-primary-accent to-secondary-accent": direction === "left",
-                 }
-               )}
-             />
+            <div
+              className={cn(
+                "absolute inset-0 bg-gradient-to-r from-primary-accent to-secondary-accent opacity-0 transition duration-300 group-hover/card:opacity-20 rounded-xl",
+                {
+                  "bg-gradient-to-b from-primary-accent to-secondary-accent":
+                    direction === "top",
+                  "bg-gradient-to-t from-primary-accent to-secondary-accent":
+                    direction === "bottom",
+                  "bg-gradient-to-l from-primary-accent to-secondary-accent":
+                    direction === "right",
+                  "bg-gradient-to-r from-primary-accent to-secondary-accent":
+                    direction === "left",
+                },
+              )}
+            />
           </motion.div>
         )}
       </AnimatePresence>
       <div
         className={cn(
           "relative h-full w-full overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900",
-          imageClassName
+          imageClassName,
         )}
       >
         <div
@@ -93,4 +99,4 @@ export const DirectionAwareHover = ({
       </div>
     </div>
   );
-}; 
+};

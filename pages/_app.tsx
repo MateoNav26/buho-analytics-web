@@ -8,9 +8,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 // --- Importación de Componentes de UI --- //
-// import Button from "@/components/ui/button";
-// import Card from "@/components/ui/card";
-// import Input from "@/components/ui/input";
 import ContactModal from "@/components/ui/ContactModal";
 import { useState } from "react";
 
@@ -34,13 +31,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`${dmSans.variable} ${playfairDisplay.variable} font-sans`}>
-      <Header onOpenContact={openContactModal} /> {/* <-- 2. LA INTEGRACIÓN DEL HEADER */}
-      
-      <main className="pt-20"> {/* Opcional pero recomendado: un <main> para el contenido principal */}
-        <Component {...pageProps} openContactModal={openContactModal} /> {/* Aquí se renderiza cada página */}
+      <Header onOpenContact={openContactModal} />{" "}
+      {/* <-- 2. LA INTEGRACIÓN DEL HEADER */}
+      <main>
+        {" "}
+        {/* Opcional pero recomendado: un <main> para el contenido principal */}
+        <Component {...pageProps} openContactModal={openContactModal} />{" "}
+        {/* Aquí se renderiza cada página */}
       </main>
-
-      <Footer onOpenContact={openContactModal} />
+      <Footer />
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </div>
   );
