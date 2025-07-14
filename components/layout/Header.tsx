@@ -11,7 +11,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white/80 dark:bg-neutral-950/80 backdrop-blur border-b border-neutral-100 dark:border-neutral-800">
+    <header className="sticky top-0 z-30 w-full bg-white/80 dark:bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-100 dark:border-neutral-800">
       <nav
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
@@ -45,9 +45,9 @@ export default function Header() {
           {/* CTA Button (Desktop only) */}
           <a
             href="#contacto"
-            className="hidden md:inline-block rounded-lg bg-black px-5 py-2.5 text-base font-semibold text-primary-500 dark:text-primary-400 shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500 font-dm-sans"
+            className="hidden md:inline-block rounded-lg bg-black px-5 py-2.5 text-base font-semibold text-primary-accent shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500 font-dm-sans"
           >
-            Solicitar Propuesta
+            Iniciar Conversación
           </a>
           {/* Hamburger (Mobile only) */}
           <button
@@ -109,10 +109,10 @@ export default function Header() {
             <li>
               <a
                 href="#contacto"
-                className="mt-8 inline-block rounded-lg bg-black px-8 py-3 text-lg font-semibold text-primary-500 dark:text-primary-400 shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="mt-8 inline-block rounded-lg bg-black px-8 py-3 text-lg font-semibold text-primary-accent shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
                 onClick={() => setMenuOpen(false)}
               >
-                Solicitar Propuesta
+                Iniciar Conversación
               </a>
             </li>
           </ul>
