@@ -6,3 +6,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Glow animation for CTA button */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 0px 0 #CFFF00, 0 0 0px 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 6px 2px #d6ff6a88, 0 0 12px 3px #fff2;
+  }
+}
+
+.glow-cta {
+  transition: box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.glow-cta:hover, .glow-cta:focus {
+  box-shadow: 0 0 0 0 #CFFF00, 0 0 12px 2px #CFFF0080, 0 0 24px 4px #fff2;
+}
+
+/* Utilidad para ocultar la barra de scroll (cross-browser) */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
