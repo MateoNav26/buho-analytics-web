@@ -64,6 +64,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-primary': 'linear-gradient(135deg, #CFFF00 0%, #b8e600 100%)',
         'gradient-secondary': 'linear-gradient(135deg, #0047AB 0%, #003f9a 100%)',
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
       },
       boxShadow: {
         'brand': '0 4px 14px 0 rgba(207, 255, 0, 0.25)',
