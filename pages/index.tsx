@@ -6,6 +6,7 @@ import PartnershipPhilosophy from "@/components/sections/PartnershipPhilosophy";
 import Services from "@/components/sections/Services";
 import Methodology from "@/components/sections/Methodology";
 import CaseStudies from "@/components/sections/CaseStudies";
+import CallToAction from "@/components/sections/CallToAction";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <Methodology />
       <CaseStudies />
+      <CallToAction />
     </>
   );
 }
