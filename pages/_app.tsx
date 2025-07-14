@@ -11,6 +11,8 @@ import Footer from "@/components/layout/Footer";
 // import Button from "@/components/ui/button";
 // import Card from "@/components/ui/card";
 // import Input from "@/components/ui/input";
+import ContactModal from "@/components/ui/ContactModal";
+import { useState } from "react";
 
 // --- Definición de Tipografías --- //
 const dmSans = DM_Sans({
@@ -26,15 +28,20 @@ const playfairDisplay = Playfair_Display({
 
 // --- Definición de la Aplicación --- //
 export default function App({ Component, pageProps }: AppProps) {
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
+  const openContactModal = () => setContactModalOpen(true);
+  const closeContactModal = () => setContactModalOpen(false);
+
   return (
     <div className={`${dmSans.variable} ${playfairDisplay.variable} font-sans`}>
-      <Header /> {/* <-- 2. LA INTEGRACIÓN DEL HEADER */}
+      <Header onOpenContact={openContactModal} /> {/* <-- 2. LA INTEGRACIÓN DEL HEADER */}
       
       <main className="pt-20"> {/* Opcional pero recomendado: un <main> para el contenido principal */}
-        <Component {...pageProps} /> {/* Aquí se renderiza cada página */}
+        <Component {...pageProps} openContactModal={openContactModal} /> {/* Aquí se renderiza cada página */}
       </main>
 
-      <Footer />
+      <Footer onOpenContact={openContactModal} />
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </div>
   );
 }

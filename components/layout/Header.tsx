@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { name: "Nosotros", href: "#nosotros" },
 ];
 
-export default function Header() {
+export default function Header({ onOpenContact }: { onOpenContact?: () => void }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -43,12 +43,13 @@ export default function Header() {
         {/* CTA Button & Hamburger */}
         <div className="flex items-center gap-2">
           {/* CTA Button (Desktop only) */}
-          <a
-            href="#contacto"
+          <button
+            type="button"
+            onClick={onOpenContact}
             className="hidden md:inline-block rounded-lg bg-black px-5 py-2.5 text-base font-semibold text-primary-accent shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500 font-dm-sans"
           >
             Iniciar Conversación
-          </a>
+          </button>
           {/* Hamburger (Mobile only) */}
           <button
             className="inline-flex items-center justify-center rounded-md p-2 text-neutral-700 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500 md:hidden"
@@ -107,13 +108,16 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <a
-                href="#contacto"
+              <button
+                type="button"
                 className="mt-8 inline-block rounded-lg bg-black px-8 py-3 text-lg font-semibold text-primary-accent shadow-sm transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {
+                  setMenuOpen(false);
+                  onOpenContact && onOpenContact();
+                }}
               >
                 Iniciar Conversación
-              </a>
+              </button>
             </li>
           </ul>
         </div>
