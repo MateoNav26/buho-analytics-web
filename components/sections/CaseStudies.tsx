@@ -12,7 +12,7 @@ export default function CaseStudies() {
     },
     {
       title: "Tradujimos el impacto en una historia con datos irrefutables.",
-      result: "Aseguraron su principal fuente de\nfinanciación por dos años más.", // dos líneas
+      result: "Aseguramos la principal fuente de\nfinanciación por dos años más.", // dos líneas
       backgroundImage:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop", // Business growth
     },
