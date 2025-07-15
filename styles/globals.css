@@ -32,3 +32,9 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari y Opera */
 }
+
+/* Permite que el fondo y borde de la píldora se apliquen a cada línea de texto */
+.pill-multiline {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
