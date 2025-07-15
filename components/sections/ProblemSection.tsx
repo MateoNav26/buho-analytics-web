@@ -11,7 +11,7 @@ export default function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          En un mundo ahogado en datos, la claridad es el único lujo.
+          Dejar de decidir a ciegas.
         </motion.h2>
 
         <motion.p
@@ -20,10 +20,13 @@ export default function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Vivimos rodeados de información, pero muchas veces falta la capacidad para transformarla en decisiones claras y accionables.
+          En un mundo ahogado en datos, la paradoja es evidente: nunca tuvimos tanta información y, a la vez, tanta incertidumbre.
           <br />
           <br />
-          En Búho Analytics, convertimos el ruido en señal, la complejidad en simplicidad, y la incertidumbre en certeza. Acompañamos a quienes toman decisiones a dar sentido a sus datos y avanzar con propósito.
+          El problema no es la falta de datos, es la falta de traducción. La mayoría de las decisiones críticas todavía se basan en suposiciones.
+          <br />
+          <br />
+          Existimos para cambiar eso.
         </motion.p>
 
         <motion.div
