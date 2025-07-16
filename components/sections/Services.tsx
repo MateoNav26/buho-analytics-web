@@ -44,7 +44,7 @@ export default function Services() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2
-            className="text-4xl md:text-5xl font-serif font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-serif font-bold text-white mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -57,7 +57,8 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           >
-            No ofrecemos servicios, ofrecemos soluciones integrales. Cada una es un ecosistema de herramientas y perspectivas diseñado para un desafío específico. Así es como lo hacemos:
+            No ofrecemos servicios, ofrecemos soluciones integrales. Cada una es un ecosistema de herramientas y perspectivas diseñado para un desafío específico.<br/><br/>
+            Así es como lo hacemos:
           </motion.p>
         </div>
 
