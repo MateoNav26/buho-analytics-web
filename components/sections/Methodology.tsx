@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
 
 // V.I.S.T.A. Method Data
 const vistaSteps = [
@@ -413,14 +414,14 @@ export default function Methodology({ openContactModal }: { openContactModal?: (
             ¿Listo para transformar sus datos con nuestra metodología
             V.I.S.T.A.?
           </p>
-          <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-primary-accent to-primary-600 text-black font-sans font-bold rounded-lg hover:shadow-brand-lg transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Button
+            type="button"
             onClick={openContactModal}
+            variant="primary"
+            size="md"
           >
             Solicitar Propuesta
-          </motion.button>
+          </Button>
         </motion.div>
       </div>
     </section>

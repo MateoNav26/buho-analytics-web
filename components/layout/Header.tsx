@@ -29,8 +29,8 @@ export default function Header({
             aria-label="Búho Analytics - Página de Inicio"
             className="flex items-center gap-2"
           >
-            <Logo className="h-8 w-auto text-neutral-900 dark:text-white" />
-            <span className="ml-2 text-lg font-bold text-neutral-900 dark:text-white tracking-tight font-dm-sans hidden sm:inline whitespace-nowrap">
+            <Logo className="h-10 w-auto text-neutral-900 dark:text-white" />
+            <span className="ml-2 text-xl font-bold text-neutral-900 dark:text-white tracking-tight font-dm-sans hidden sm:inline whitespace-nowrap">
               Búho Analytics
             </span>
           </Link>

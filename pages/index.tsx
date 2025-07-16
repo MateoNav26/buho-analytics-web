@@ -43,8 +43,7 @@ export default function Home({ openContactModal }: { openContactModal?: () => vo
         <meta property="og:locale" content="es_ES" />
         <meta property="og:url" content="https://tu-dominio.com" />
         <meta property="og:site_name" content="Búho Analytics" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://tu-dominio.com" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -53,7 +52,7 @@ export default function Home({ openContactModal }: { openContactModal?: () => vo
               "@type": "Organization",
               name: "Búho Analytics",
               url: "https://tu-dominio.com",
-              logo: "/favicon.ico",
+              logo: "/favicon.svg",
               sameAs: [],
             }),
           }}
