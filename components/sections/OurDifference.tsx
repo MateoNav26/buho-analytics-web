@@ -12,12 +12,12 @@ export default function OurDifference() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Donde la sociología encuentra la ingeniería de datos.
+            Donde la sociología se encuentra<br/>con la ingeniería de datos
           </motion.h2>
           <motion.div
             className="w-24 h-px bg-gradient-to-r from-primary-accent to-secondary-accent mx-auto"
             initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
+            whileInView={{ opacity: 1, scaleX: 1, y: 15 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             style={{ originX: 0.5 }}
           />

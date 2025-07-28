@@ -5,20 +5,20 @@ export default function CaseStudies() {
   // Placeholder data - you can replace these with actual case study data
   const caseStudies = [
     {
-      title: "Descubrimos por qué el 60% de los clientes abandona el carrito.",
+      title: "Descubrimos por qué el 60% de los clientes abandona el carrito",
       result: "+35% de facturación en un trimestre.", // una sola línea
       backgroundImage:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop", // Analytics dashboard
     },
     {
-      title: "Tradujimos el impacto en una historia con datos irrefutables.",
+      title: "Tradujimos el impacto en una historia con datos irrefutables",
       result: "Aseguramos la principal fuente de\nfinanciación por dos años más.", // dos líneas
       backgroundImage:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop", // Business growth
     },
     {
-      title: "Mapeamos las verdaderas necesidades de movilidad.",
-      result: "Una nueva política de transporte público\ncon 92% de aprobación ciudadana.", // dos líneas
+      title: "Mapeamos las verdaderas necesidades de movilidad",
+      result: "Nueva política de transporte público\ncon 92% de aprobación ciudadana.", // dos líneas
       backgroundImage:
         "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop", // Data visualization
     },
@@ -34,7 +34,7 @@ export default function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Resultados, no promesas.
+            Resultados, no promesas
           </motion.h2>
         </div>
 

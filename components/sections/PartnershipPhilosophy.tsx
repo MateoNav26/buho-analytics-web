@@ -13,7 +13,7 @@ export default function PartnershipPhilosophy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            No Buscamos Clientes. Forjamos Alianzas.
+            No buscamos clientes. Forjamos alianzas
           </motion.h2>
 
           {/* Content */}
