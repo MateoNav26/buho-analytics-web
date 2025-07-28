@@ -6,12 +6,12 @@ export default function ProblemSection() {
     <section className="py-20 md:py-32 bg-black">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
-          className="font-sans text-4xl md:text-6xl text-white-raw mb-8 max-w-4xl mx-auto"
+          className="font-serif text-4xl md:text-6xl text-primary-accent mb-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Dejar de decidir a ciegas.
+          Dejá de decidir a ciegas
         </motion.h2>
 
         <motion.p

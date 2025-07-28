@@ -44,12 +44,12 @@ export default function Services() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2
-            className="text-4xl md:text-5xl font-serif font-bold text-white mb-10"
+            className="text-4xl md:text-6xl font-serif font-regular text-primary-accent mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Nuestras Soluciones: Claridad y Acción para cada Desafío.
+            Nuestras soluciones: claridad y acción para cada desafío
           </motion.h2>
           <motion.p
             className="text-lg md:text-xl text-white-raw mb-2"
@@ -112,7 +112,7 @@ export default function Services() {
           >
             <h3 className="text-2xl font-bold font-serif mb-2 text-white-raw">Análisis de Impacto Social</h3>
             <p className="font-serif italic text-primary-accent mb-3">Demostrar que es lo que hacés, realmente transforma.</p>
-            <p className="mb-4">Tu trabajo cambia vidas. Nosotros te ayudamos a probarlo. Medimos y visibilizamos tu impacto social con una metodología que combina el rigor estadístico con la potencia de las historias humanas, creando reportes que convencen a mentes y corazones.</p>
+            <p className="mb-4">Tu trabajo cambia vidas. Nosotros te ayudamos a probarlo. Medimos y visibilizamos tu impacto social con una metodología que combina el rigor estadístico con la potencia de las historias humanas, creando reportes que convencen mentes y corazones.</p>
             <ul className="list-disc list-inside space-y-1 mt-auto marker:text-secondary-500">
               <li>Evaluación de Impacto de Programas</li>
               <li>Diseño de Indicadores a Medida</li>

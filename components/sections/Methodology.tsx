@@ -358,21 +358,21 @@ export default function Methodology({ openContactModal }: { openContactModal?: (
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Nuestra Metodología V.I.S.T.A.
+            Nuestra metodología <i className="italic">V.I.S.T.A.</i>
           </motion.h2>
           <motion.p
             className="font-sans text-xl text-white-raw/80 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 15 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Un enfoque único que combina la precisión algorítmica con la
-            interpretación sociológica
+            <i className="italic">"Ver lo que nadie más ve."</i><br/><br/>
+            Para ver con claridad, primero hay que dominar la oscuridad. Nuestra metodología nace de esta convicción, fusionando la precisión algorítmica con la profunda interpretación sociológica.
           </motion.p>
           <motion.div
             className="w-24 h-px bg-gradient-to-r from-primary-accent to-secondary-accent mx-auto mt-8"
             initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
+            whileInView={{ scaleX: 1, y: 15 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           />
         </div>
@@ -411,8 +411,7 @@ export default function Methodology({ openContactModal }: { openContactModal?: (
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="font-sans text-lg text-white-raw/70 mb-6">
-            ¿Listo para transformar sus datos con nuestra metodología
-            V.I.S.T.A.?
+            ¿Listo para transformar sus datos con nuestra metodología <i className="italic">V.I.S.T.A.</i>?
           </p>
           <Button
             type="button"

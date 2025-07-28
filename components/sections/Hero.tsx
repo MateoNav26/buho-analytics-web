@@ -18,12 +18,12 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
         >
-          Ahora, dale la certeza que necesita.
+          Ahora, dale la certeza que tanto necesitás
         </motion.h2>
         <motion.p
           className="font-sans text-lg md:text-xl text-white-raw max-w-3xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 10 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
           En Búho Analytics no reemplazamos tu instinto, lo potenciamos. Convertimos la complejidad de tus datos en un plan de acción tan claro y preciso, que tu próximo movimiento será el más seguro que hayas hecho.
