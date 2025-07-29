@@ -41,7 +41,7 @@ export default function Home({ openContactModal }: { openContactModal?: () => vo
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_ES" />
-        <meta property="og:url" content="https://tu-dominio.com" />
+        <meta property="og:url" content="https://buho-analytics.com" />
         <meta property="og:site_name" content="Búho Analytics" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <script
@@ -51,7 +51,7 @@ export default function Home({ openContactModal }: { openContactModal?: () => vo
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Búho Analytics",
-              url: "https://tu-dominio.com",
+              url: "https://buho-analytics.com",
               logo: "/favicon.svg",
               sameAs: [],
             }),
@@ -63,7 +63,7 @@ export default function Home({ openContactModal }: { openContactModal?: () => vo
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              url: "https://tu-dominio.com",
+              url: "https://buho-analytics.com",
               name: "Búho Analytics",
             }),
           }}

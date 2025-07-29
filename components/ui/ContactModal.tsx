@@ -129,16 +129,15 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   id="contact-modal-title"
                   className="font-serif text-3xl text-primary-accent mb-2 drop-shadow-lg"
                 >
-                  Iniciemos la Conversación
+                  Iniciemos la conversación
                 </h3>
                 <p className="font-sans text-white-raw/70 text-base">
-                  Contanos sobre tu proyecto
+                  Hablemos sobre tu proyecto!
                 </p>
               </div>
 
               {/* Separador visual */}
-              <div className="w-16 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary-accent/80 via-white-raw/30 to-primary-accent/80 opacity-80" />
-
+              <div className="w-16 h-0.5 mx-auto mb-8 rounded-full bg-gradient-to-r from-secondary-accent via-primary-accent to-secondary-accent" />
               {/* Formulario elegante */}
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
@@ -188,13 +187,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     htmlFor="desafio"
                     className="block text-white-raw text-base font-medium mb-3"
                   >
-                    Tu Desafío *
+                    Tu Desafío
                   </label>
                   <Textarea
                     id="desafio"
                     name="desafio"
-                    required
-                    rows={6}
+                    rows={3}
                     value={formData.desafio}
                     onChange={handleChange}
                     placeholder="Contanos sobre tu desafío..."
